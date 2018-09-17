@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            /* Ширина таблицы */
+            border: 1px solid black;
+            /* Рамка вокруг таблицы */
+            border-collapse: collapse;
+            /* Отображать только одинарные линии */
+        }
+        td {
+            padding: 5px;
+            /* Поля вокруг содержимого ячеек */
+            border: 1px solid black;
+            /* Граница вокруг ячеек */
+        }
+    </style>
+</head>
+
+<!--"Придт слева" при объединении столбцов-->
+<!--"Придт сверху" при объединении строк-->
+<body>
+    <table>
+        <tr>
+            <td rowspan="2" colspan="2"></td>
+            <td rowspan="4"></td>
+            <td colspan="4"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td rowspan="2"></td>
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <td colspan="2"></td>
+            <td rowspan="3"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td rowspan="2"></td>
+            <td></td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
