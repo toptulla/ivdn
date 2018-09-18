@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>All selectors in</title>
+<style>
+
+/*Группа селекторов*/
+.first, .second {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.first {
+	font-size: 2rem;
+	color: gold;	
+}
+
+.second {
+	font-size: 1rem;
+	color: silver;
+}
+
+/*Контекстные (вложенные, не важно на каком уровне*/
+.parentContext .context {
+	color: red;
+}
+
+/*Соседний*/
+h1 + .neighboring {
+	color: green;
+}
+
+/*Последующие*/
+h1 ~ .following {
+	color: orange;
+}
+
+/*Дочерний*/
+.parent > .chid {
+	color: blue;
+}
+
+/*Множественные*/
+p.class1 {
+    background-color: yellow;
+}
+
+/**/
+.class3 {
+    color: aqua;
+    font-size: 20px;
+    background-color: black;
+}
+
+.class3.class4 {
+    color: yellowgreen;
+    font-size: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<!--Группа селекторов-->
+<p class="first">This is first paragraph</p>
+<p class="second">This is second paragraph</p>
+
+<!--Контекстные (вложенные, не важно на каком уровне-->
+<div class="parentContext">
+	<p class="context">This is 1 level paragraph</p>
+    <div>
+        <p class="context">This is 2 level paragraph</p>
+    </div>
+</div>
+
+<!--Соседние селекторы-->
+<h1>Заголовок</h1>
+<p class="neighboring">This is neighboring h1 paragraph</p>
+<p class="neighboring">This is neighboring p paragraph</p>
+
+<!--Последующие селекторы-->
+<h1>Заголовок</h1>
+<p class="following">This is following h1 paragraph</p>
+<p class="following">This is following h1 paragraph</p>
+
+<!--Дочерние селекторы-->
+<div class="parent">
+	<p class="chid">This is chid paragraph</p>
+    <div>
+        <p class="chid">This is not chid for parent paragraph</p>
+    </div>
+    <p class="chid">This is chid paragraph</p>
+</div>
+
+<!--Множественные-->
+<p class="class1">
+    Paragraph class1
+</p>
+
+<span class="class1">
+    Span class1
+</span>
+
+<p class="class1 class2">
+    Paragraph class1 and class2
+</p>
+
+<!---->
+<p class="class3">
+        Paragraph class3
+    </p>
+
+<p class="class3 class4">
+    Paragraph class3 and class4
+</p>
+
+
+</body>
+</html>

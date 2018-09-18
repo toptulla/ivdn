@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* Такой вид селектора позволяет выбрать все параграфы, ко орые находятся непосредственно после заголовков первого уровня. */
+        li + li {
+            background-color: greenyellow;
+        }
+        h1 + p {
+            background-color: lavender;
+            font-size: 18px;
+        }
+
+        /* Селектор применяет стили ко всем параграфам, которые находятся после заголовка второго уровня и имеют общего родителя. */
+        h2 ~ p {
+            background-color: black;
+            color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Заголовок</h1>
+    <p>Первый параграф</p>
+    
+    <h1>Второй заголовок</h1>
+    <p>Второй параграф</p>
+
+    <h1>Третий параграф</h1>
+    <p>Третий заголовок</p>
+
+    <p>Параграф в теге body</p>
+    <div>
+        <h2>Заголовок второго уровня</h2>
+        <p>1 Параграф в теге div</p>
+        <ul class="red">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+        </ul>
+        <p>2 Параграф в теге div</p>
+        <p>3 Параграф в теге div</p>
+    </div>
+    <a href="#">Link in body.</a>
+</body>
+</html>
