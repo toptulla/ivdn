@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Floating</title>
+    <style>
+        body {
+            margin: 0 -15px;
+        }
+
+        div.container {
+            background-color: aquamarine;
+        }
+
+        div.container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        div.container > div {
+            width: calc(100% / 3 - 30px);
+            height: 100px;
+            float: left;
+            margin: 15px;
+        }
+
+        #elem1 {
+            background-color: red;
+        }
+
+        #elem2 {
+            background-color: green;
+        }
+
+        #elem3 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="elem1"></div>
+        <div id="elem2"></div>
+        <div id="elem3"></div>
+    </div>
+</body>
+
+</html>
